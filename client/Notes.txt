@@ -1,0 +1,3 @@
+Future Issues:
+1.. babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser
+2.. exclude in webpack rules (adding brackets and a  new itme)
