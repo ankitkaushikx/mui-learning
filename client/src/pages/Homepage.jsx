@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Home() {
-  const [posts, setPosts] = useState([]);
+  const [allPosts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/posts/")
+      .get("http://localhost:5000/posts")
       .then((res) => {
         console.log(res.data);
         setPosts(res.data);
@@ -14,13 +14,13 @@ function Home() {
       .catch((error) => {
         console.log("---All Posts Error Client", error);
       });
-  }, []); // Add an empty dependency array to run the effect only once
+  }, []);
 
   return (
     <>
-      <h1>All Posts</h1>
+      <h1>Home</h1>
       <ul>
-        {posts.map((post, index) => {
+        {allPosts.map((post, index) => {
           return (
             <>
               <div>

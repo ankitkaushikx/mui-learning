@@ -4,7 +4,7 @@ import postRouter from "./postRoutes.js";
 const router = express.Router();
 
 // Base Route
-router.use("/posts", postRouter);
+router.use("/posts/", postRouter);
 router.use("/", mainRouter);
 
 export default router;
