@@ -1,10 +1,20 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production", // Change mode to "production" for optimized build
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "build"), // Specify the output path
+    filename: "main.js",
+  },
+  // ... rest of your configuration
+};
+
+module.exports = {
+  mode: "production",
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "build"),
     filename: "main.js",
   },
 
